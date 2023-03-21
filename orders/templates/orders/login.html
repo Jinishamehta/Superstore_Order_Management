@@ -1,9 +1,12 @@
-{% extends 'main.html' %}
 
+{% extends 'main.html' %}
 {% block content %}
+
 <div id="layoutSidenav_content">
   <main>
+
       <div class="container-fluid px-4">
+        <img src="/Users/jinishamehta/Documents/NYU/DBMS/Advance_Project/Superstore/static/images/supermarket.jpeg">
           -----------------------------------------------------------------------------------------------------------------------------------------------------------------
           <div class="card mb-4" >
               <div class="card-header">
@@ -16,6 +19,7 @@
       <button type="submit">Login</button>
       <div class="container" style="background-color: #eee">
         <label style="padding-left: 15px">
+          <span class="password"><a href="{% url 'password_reset' %}"> Forgot password?</a></span>
         </div>
     </form>
   </div>

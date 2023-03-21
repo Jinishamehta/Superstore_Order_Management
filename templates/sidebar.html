@@ -8,6 +8,21 @@
             <div class="nav">
                 <div class="sb-sidenav-menu-heading"></div>
 
+                {% if request.user.is_authenticated %}
+
+                <a class="nav-link" href="{% url 'Order List' %}">Orders</a>
+                <a class="nav-link" href="{% url 'Product List' %}">Products</a>
+                <a class="nav-link" href="{% url 'Category List' %}">Category</a>
+                <a class="nav-link" href="{% url 'Sub Category List' %}">SubCategory</a>
+                <a class="nav-link" href="{% url 'Customer List' %}">Customer</a>
+                <a class="nav-link" href="{% url 'Ship List' %}">Shipping </a>
+
+                {% endif %}
+
+                {% if request.user.is_superuser %}
+                <a class="nav-link" href="{% url 'Employee List' %}">Employees</a>
+                {% endif %}
+
             </div>
         </div>
         <div class="sb-sidenav-footer">
